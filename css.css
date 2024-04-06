@@ -99,34 +99,72 @@ nav h1 {
 /* End Home Section */
 
 /* Cards Section */
-.cards-container {
+.cards-container{
   display: flex;
   gap: 5rem;
   position: relative;
-  bottom: 7rem;
-  padding-left: 13rem;
-  padding-right: 13rem;
+  bottom: 13rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-.card {
-  background: var(--orange-color);
-  color: var(--white-color);
+
+.card i{
+  font-size: 150px;
+  padding-bottom: .5rem;
+}
+
+h2{
+font-size: 46px;
+margin-bottom: 15px;
+}
+
+.cards-donate, .cards-drives{
+background: #FBA61A;
+border: 10px solid #f99a01;
+color: #fff;
+
+}
+
+
+
+.hello{
+background-color: transparent;
+  color: #fff;
+  padding: 20px 40px;
+  margin-top: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease .4s;
+  font-size: 20px;
+}
+
+.cards-volunteer{
+background: #7EC248;
+border: 10px solid #68ba26;
+color: #fff;
+
+}
+
+
+
+
+
+.card{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50rem;
-  height: 12rem;
+  width: 95rem;
+  height: 30rem;
   border-radius: 30px;
+  transition: all .4s ease;
   cursor: pointer;
   justify-content: center;
 }
-.card i {
-  font-size: 60px;
-  padding-bottom: .5rem;
-}
-.card h2 {
-  margin-bottom: 20px;
-}
+
 /* End Cards Section */
 
 /* About Section */

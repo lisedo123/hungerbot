@@ -185,11 +185,11 @@ nav h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: #104900;
+  color: #ffffff;
 }
 
 /* Add overlay */
-.info::before {
+.info::after {
   content: "";
   position: absolute;
   top: 0;

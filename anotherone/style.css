@@ -45,8 +45,6 @@ nav .login button{
     background-color: transparent;
 }
 
-
-
 header{
     padding: 0 80px;
     height: calc(100vh - 80px);
@@ -292,60 +290,15 @@ h2.separator{
     margin-top: 8px;
 }
 
-footer{
-    background-color: #000;
+footer {
+    background-color: #0f2182;
     color: #fff;
-    padding: 100px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 20px 0;
+    text-align: center;
 }
 
-footer h3{
-    font-size: 48px;
-}
-
-footer .right{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 26px;
-}
-
-footer .right .links{
-    display: flex;
-    gap: 30px;
-}
-
-footer .right .links a{
-    color: #989898;
-    transition: color 0.3s ease;
-}
-
-footer .right .links a:hover{
-    color: #fff;
-}
-
-footer .right .social{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-footer .right .social i{
-    font-size: 30px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-footer .right .social i:hover{
-    color: #304ffe;
-}
-
-footer .right p{
-    font-size: 13px;
-    color: #777;
+footer p {
+    font-size: 14px;
 }
 
 .contact-desciption{
@@ -365,6 +318,15 @@ input{
     text-align: center;
     padding-left: .2rem;
     color: #0f2182;
+}
+
+.space{
+    margin-bottom: 50px;
+}
+
+::selection{
+    background: #000;
+    color: #fff;
 }
 
 @media screen and (max-width: 1400px) {
@@ -578,7 +540,189 @@ input{
 
 }
 
-::selection{
-    background: #000;
+
+
+
+/* General Styles */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    object-fit: cover;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+/* Header Styles */
+header {
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .hero {
+    width: 45%;
+}
+
+header .hero h1 {
+    font-size: 36px;
+    color: #0f2182;
+}
+
+header .hero p {
+    margin: 20px 0;
+    color: #777;
+}
+
+header .links {
+    display: flex;
+    gap: 20px;
+}
+
+header .links a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Options Section Styles */
+.options {
+    padding: 0 80px;
+    margin-top: 40px;
+}
+
+.options h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0f2182;
+}
+
+.options-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.option {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.option i {
+    font-size: 48px;
+    color: #0f2182;
+}
+
+.option h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.option p {
+    color: #777;
+    font-size: 16px;
+}
+
+.option a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0f2182;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+footer .footer-right .links a {
+    color: #989898;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-right .links a:hover {
     color: #fff;
+}
+
+footer .footer-right .social-icons i {
+    font-size: 24px;
+    color: #989898;
+    transition: color 0.3s ease;
+}
+
+footer .footer-right .social-icons i:hover {
+    color: #fff;
+}
+
+footer p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 0 40px;
+    }
+
+    header .hero h1 {
+        font-size: 30px;
+    }
+
+    header .links a {
+        font-size: 14px;
+    }
+
+    .options {
+        padding: 0 40px;
+    }
+
+    .options-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .option {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    footer {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .hero {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    header .links {
+        margin-top: 20px;
+    }
+
+    .options-grid {
+        gap: 20px;
+    }
+
+    .option {
+        padding: 15px;
+    }
 }

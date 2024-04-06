@@ -1,0 +1,266 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --orange-color: #FBA61A;
+  --white-color: #ffffff;
+  --green-color: #7EC248;
+  --title-tt: #423f3f;
+  --para-graph: #828282;
+  --nav:#7EC248;
+}
+
+/* Body Styles */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 200vh;
+}
+
+/* Global Link Styles */
+a {
+  text-decoration: none;
+  color: var(--title-tt);
+  font-weight: 500;
+  transition: all .1s ease;
+}
+a:hover {
+  color: var(--green-color);
+  font-size: 16px;
+}
+
+
+/* Header Section */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.navbar-container {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nav);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160vh;
+}
+nav h1 {
+  font-size: 35px;
+  color: var(--orange-color);
+  cursor: pointer;
+}
+.navbar-container ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 800;
+}
+/* End Header Section */
+
+
+/* Home Section */
+.home-container {
+  height: 80vh;
+  background: url('images/hero.png.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white-color);
+}
+.home-container p {
+  font-size: 30px;
+  font-weight: 800;
+  background: var(--orange-color);
+  width: 20rem;
+  padding: 5px;
+  text-align: center;
+  border-radius: .5rem;
+}
+.home-title {
+  padding-top: 1rem;
+}
+.home-container h1 {
+  font-size: 70px;
+  font-weight: 900;
+}
+/* End Home Section */
+
+
+/* Cards Section */
+.cards-container {
+  display: flex;
+  gap: 5rem;
+  position: relative;
+  bottom: 7rem;
+  padding-left: 13rem;
+  padding-right: 13rem;
+  align-items: center;
+}
+.card {
+  background: var(--orange-color);
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50rem;
+  height: 12rem;
+  border-radius: 30px;
+  cursor: pointer;
+  justify-content: center;
+}
+.card i {
+  font-size: 60px;
+  padding-bottom: .5rem;
+}
+.card h2 {
+  margin-bottom: 20px;
+}
+/* End Cards Section */
+
+
+/* About Section */
+.about-container-whole {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: #bed5fb;
+}
+.about-container {
+  height: 60vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 4rem;
+}
+.about-container2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-title {
+  color: var(--orange-color);
+  font-size: 45px;
+}
+.about-title1 {
+  color: var(--title-tt);
+  font-size: 45px;
+  padding-bottom: 1rem;
+}
+.about-paragrpah {
+  color: var(--para-graph);
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: 100;
+}
+.about-img img {
+  border-radius: 20px;
+  width: 500px;
+  height: 530px;
+}
+/* End About Section */
+
+/* Info Section */
+.info{
+  margin-top: 50px;
+  height: 60vh;
+  background: url('images/colorful-fruits.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white-color);
+}
+/* End Info Section */
+
+/* Contact Us Section */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-self: center;
+  padding-top: 6rem;
+}
+.contact-ip {
+  display: flex;
+  gap: 1rem;
+}
+.ip1,
+.ip2 {
+  width: 300px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+textarea {
+  height: 100px;
+}
+button {
+  background-color: transparent;
+  color: var(--white-color);
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease .4s;
+}
+button:hover {
+  background-color: var(--white-color);
+  color: var(--orange-color);
+  border: 1px solid #ccc;
+}
+.submit {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+::selection {
+  background: var(--white-color);
+  color: var(--orange-color);
+}
+/* End Contact Us Section */
+
+/* Footer Section */
+.footer {
+  background: var(--title-tt);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .6rem;
+}
+
+.footer-container {
+  padding-top: 5rem;
+}

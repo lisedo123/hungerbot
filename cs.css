@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --orange-color:#FBA61A;
+  --white-color:#ffffff;
+}
+body{
+  font-family: sans-serif;
+  background-color: var(--white-color);
+  margin-left: 1rem;
+  color: var(--orange-color);
+  padding: 0 20px;
+}
+
+/* Back Button */
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #FBA61A;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.back-button box-icon {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  color: #FBA61A;
+}
+
+.container a {
+  font-size: 25px;
+}
+
+main p{
+  color: #FBA61A;
+  font-weight: 200;
+  font-size: 20px;  
+}
+.main a{
+  text-decoration: none;
+}  
+.state-drives{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(14rem), 1fr));
+  gap: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 5rem;
+  padding: 5rem;
+}
+
+.state-drives .state{
+  background-color: #f3f3f3;
+  cursor: pointer;
+  padding: 1rem 0rem 1rem 0rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .4s ease;
+  text-transform: uppercase;
+  color: #0f2182;
+  border: #ffffff 1px solid;
+  transition: .3s ease;
+}
+
+.state:hover{
+  background: #ffeaea;
+  color: white;
+  border: #FBA61A 1px solid;
+}

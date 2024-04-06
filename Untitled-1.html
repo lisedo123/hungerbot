@@ -1,0 +1,169 @@
+
+    <div class="main">
+        <div id="teachrequst" class="teachrequst">
+            <div class="main-head">
+                
+                <div class="top">
+                    <h1><span>Requests</span></h1>
+                
+                    <div class="suggestion">
+                        <input type="checkbox" id="show">
+                        <label for="show" class="suggest" role="button">Add Requests</label>
+                            
+                        <div class="pplsugg">
+                            <label for="show" class="close-btn" title="close">&times;</label>
+                            <h1>Add Request</h1>
+                            <form action="#">
+                                <div class="data">
+                                    <label>School Supplies:</label>
+                                    <input id="name" type="text">
+                                </div>
+                                <div class="data">
+                                    <label>Contact Details:</label>
+                                    <input id="email" type="text">
+                                </div>
+                                <div class="butn">
+                                    <div class="inner"></div>
+                                    <input type="submit" value="submit" class="sub" id="submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Sno</td>
+                                <td>Requested School Supplies</td>
+                                <td>Contact Details</td>
+                            </tr>
+                        </thead>
+        
+                        <tbody class="tbody2" id="tbody2"></tbody>
+                    </table>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="navLinksmove.js"></script>
+    <script src="navmove.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+    <script type="module">
+        // fill table function to add one record to the table
+        var stdNo = 0;
+        var tbody = document.getElementById('tbody2')
+        function AddItemToTable( SchoolSupply, ContactDetails ) {
+            let trow = document.createElement('tr');
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+
+
+            td1.innerHTML = ++stdNo;
+            td2.innerHTML = SchoolSupply;
+            td3.innerHTML = ContactDetails;
+
+
+            trow.appendChild(td1);
+            trow.appendChild(td2);
+            trow.appendChild(td3);
+
+            tbody.appendChild(trow);
+        }
+
+        function AddAllItemsToTable(SchoolSuppliesRequesst) {
+            stdNo = 0;
+            tbody.innerHTML = "";
+            SchoolSuppliesRequesst.forEach(element => {
+                AddItemToTable( element.SchoolSupply, element.ContactDetails );
+            });
+        }
+        
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        import{ getDatabase, ref, child, onValue, get, set } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCtN8RmYHBd6YNUN7nH9PDE7eWILsbih08",
+            authDomain: "drivesugg.firebaseapp.com",
+            databaseURL: "https://drivesugg-default-rtdb.firebaseio.com",
+            projectId: "drivesugg",
+            storageBucket: "drivesugg.appspot.com",
+            messagingSenderId: "82162477728",
+            appId: "1:82162477728:web:9dbf0388746dc9ad5b77c5",
+            measurementId: "G-2EK9DP7J3B"
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        const db = getDatabase();
+
+        //--get all data--\\
+
+        function GetAllDataOnce() {
+            const dbRef = ref(db);
+
+            get(child(dbRef, "000"))
+                .then((snapshot) => {
+                    var request = [];
+
+                    snapshot.forEach(childSnapShot => {
+                        request.push(childSnapShot.val());
+                    });
+                    AddAllItemsToTable(request);
+                });
+        }
+
+        //--get realdata--\\
+        function GetAllDataRealtime() {
+            const dbRef = ref(db, "000");
+
+            onValue(dbRef, (snapshot) => {
+                var request = [];
+
+                snapshot.forEach(childSnapShot => {
+                    request.push(childSnapShot.val());
+                });
+                AddAllItemsToTable(request);
+
+            })
+        }
+
+        // button/form
+
+        document.getElementById("submit").addEventListener('click', function(e){
+            e.preventDefault();
+            set(ref(db, '000/' + document.getElementById("name").value),
+            {
+
+                SchoolSupply: document.getElementById("name").value,
+                ContactDetails: document.getElementById("email").value,
+
+            });
+            alert("Request Sent!");
+        });
+
+
+    window.onload = GetAllDataRealtime;
+    </script>
+

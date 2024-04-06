@@ -13,6 +13,7 @@
   --title-tt: #423f3f;
   --para-graph: #828282;
   --nav:#7EC248;
+  --light-blue: #bed5fb;
 }
 
 /* Body Styles */
@@ -99,104 +100,64 @@ nav h1 {
 /* End Home Section */
 
 /* Cards Section */
-.cards-container{
+.cards-container {
   display: flex;
   gap: 5rem;
   position: relative;
-  bottom: 13rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  display: flex;
-  justify-content: center;
+  bottom: 7rem;
+  padding-left: 13rem;
+  padding-right: 13rem;
   align-items: center;
 }
-
-.card i{
-  font-size: 150px;
-  padding-bottom: .5rem;
-}
-
-h2{
-font-size: 46px;
-margin-bottom: 15px;
-}
-
-.cards-donate, .cards-drives{
-background: #FBA61A;
-border: 10px solid #f99a01;
-color: #fff;
-
-}
-
-
-
-.hello{
-background-color: transparent;
-  color: #fff;
-  padding: 20px 40px;
-  margin-top: 10px;
-  border: 2px solid white;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all ease .4s;
-  font-size: 20px;
-}
-
-.cards-volunteer{
-background: #7EC248;
-border: 10px solid #68ba26;
-color: #fff;
-
-}
-
-
-
-
-
-.card{
+.card {
+  background: var(--orange-color);
+  color: var(--white-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 95rem;
-  height: 30rem;
+  width: 50rem;
+  height: 12rem;
   border-radius: 30px;
-  transition: all .4s ease;
   cursor: pointer;
   justify-content: center;
 }
-
+.card i {
+  font-size: 60px;
+  padding-bottom: .5rem;
+}
+.card h2 {
+  margin-bottom: 20px;
+}
 /* End Cards Section */
 
 /* About Section */
 .about-container-whole {
   height: 70vh;
+  width: 100%;
   display: flex;
   align-items: center;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  background-color: #bed5fb;
+  justify-content: center;
+  /* padding-left: 4rem; */
+  /* padding-right: 4rem; */
+  background-color: var(--light-blue);
 }
 .about-container {
-  height: 60vh;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
   display: flex;
-  gap: 4rem;
-}
-.about-container2 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  /* gap: 4rem; */
 }
 .about-title {
   color: var(--orange-color);
   font-size: 45px;
 }
+.about-txt {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .about-title1 {
   color: var(--title-tt);
   font-size: 45px;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 }
 .about-paragrpah {
   color: var(--para-graph);
@@ -205,9 +166,9 @@ color: #fff;
   font-weight: 100;
 }
 .about-img img {
+  display: flex;
   border-radius: 20px;
-  width: 500px;
-  height: 530px;
+  width: 800px;
 }
 /* End About Section */
 
@@ -223,7 +184,7 @@ color: #fff;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: #ffffff;
+  color: var(--green-color);
 }
 
 /* Add overlay */
@@ -234,7 +195,7 @@ color: #fff;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
 }
 .info h1 {
   font-size: 70px;

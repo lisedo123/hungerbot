@@ -5,13 +5,15 @@
 }
 :root{
   --orange-color:#FBA61A;
+  --green-color: #7EC248;
   --white-color:#ffffff;
+  --light-blue: #cadcf9;
 }
 body{
   font-family: sans-serif;
   background-color: var(--white-color);
   margin-left: 1rem;
-  color: var(--orange-color);
+  color: var(--green-color);
   padding: 0 20px;
 }
 
@@ -21,7 +23,7 @@ body{
   position: absolute;
   top: 20px;
   left: 20px;
-  color: #FBA61A;
+  color: var(--green-color);
   text-decoration: none;
   font-size: 16px;
   display: flex;
@@ -36,9 +38,8 @@ body{
 .container a {
   font-size: 25px;
 }
-
 main p{
-  color: #FBA61A;
+  /* color: #FBA61A; */
   font-weight: 200;
   font-size: 20px;  
 }
@@ -65,7 +66,7 @@ main p{
   justify-content: center;
   transition: all .4s ease;
   text-transform: uppercase;
-  color: #0f2182;
+  /* color: #0f2182; */
   border: #ffffff 1px solid;
   transition: .3s ease;
 }

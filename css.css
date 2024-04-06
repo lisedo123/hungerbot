@@ -104,7 +104,7 @@ nav h1 {
   display: flex;
   gap: 5rem;
   position: relative;
-  bottom: 7rem;
+  bottom: 5rem;
   padding-left: 13rem;
   padding-right: 13rem;
   align-items: center;
@@ -136,28 +136,24 @@ nav h1 {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* padding-left: 4rem; */
-  /* padding-right: 4rem; */
   background-color: var(--light-blue);
+  justify-content: space-around;
 }
 .about-container {
   display: flex;
-  /* gap: 4rem; */
-}
-.about-title {
-  color: var(--orange-color);
-  font-size: 45px;
 }
 .about-txt {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+.about-title {
+  color: var(--orange-color);
+  font-size: 45px;
+}
 .about-title1 {
   color: var(--title-tt);
   font-size: 45px;
-  /* padding-bottom: 1rem; */
 }
 .about-paragrpah {
   color: var(--para-graph);
@@ -166,9 +162,9 @@ nav h1 {
   font-weight: 100;
 }
 .about-img img {
-  display: flex;
+  /* display: flex; */
   border-radius: 20px;
-  width: 800px;
+  width: 500px;
 }
 /* End About Section */
 

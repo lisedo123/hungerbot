@@ -4,17 +4,18 @@
   box-sizing: border-box;
 }
 :root{
-  --orange-color:#FBA61A;
+  --orange-color: #FBA61A;
   --green-color: #7EC248;
   --white-color:#ffffff;
+  --gray-color: #f3f3f3;
   --light-blue: #cadcf9;
 }
 body{
   font-family: sans-serif;
   background-color: var(--white-color);
-  margin-left: 1rem;
-  color: var(--green-color);
-  padding: 0 20px;
+  /* margin-left: 1rem; */
+  /* color: var(--green-color); */
+  /* padding: 0 20px; */
 }
 
 /* Back Button */
@@ -34,30 +35,29 @@ body{
   margin-bottom: 5px;
   color: #FBA61A;
 }
-
 .container a {
   font-size: 25px;
 }
+
+/* End Back Button */
+
+
 main p{
-  /* color: #FBA61A; */
-  font-weight: 200;
-  font-size: 20px;  
-}
-.main a{
-  text-decoration: none;
-}  
+  color: var(--orange-color);
+  font-weight: 900;
+  font-size: 23px;
+} 
 .state-drives{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(14rem), 1fr));
   gap: 1rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 5rem;
   padding: 5rem;
 }
-
+.main a{
+  text-decoration: none;
+}
 .state-drives .state{
-  background-color: #f3f3f3;
+  background-color: var(--green-color);
   cursor: pointer;
   padding: 1rem 0rem 1rem 0rem;
   border-radius: 15px;
@@ -70,9 +70,8 @@ main p{
   border: #ffffff 1px solid;
   transition: .3s ease;
 }
-
 .state:hover{
   background: #ffeaea;
-  color: white;
+  color: #7EC248;
   border: #FBA61A 1px solid;
 }

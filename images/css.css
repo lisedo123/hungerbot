@@ -72,7 +72,7 @@ nav h1 {
 /* Home Section */
 .home-container {
   height: 80vh;
-  background: url('images/hero.png.png');
+  background: url('hero.png.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -312,7 +312,7 @@ form .butn input{
   position: relative; /* Add relative positioning */
   margin-top: -350px;
   height: 60vh;
-  background: url('images/colorful-fruits.jpg');
+  background: url('colorful-fruits.jpg');
   background-size: cover;
   background-position: center;
   display: flex;

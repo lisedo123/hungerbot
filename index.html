@@ -24,16 +24,15 @@
     <!-- End Header Section -->
 
     <!-- Home Section -->
-    <section class="home-container">
+   <section class="home-container">
         <p>Join Our <span>Cause</span></p>
         <div class="home-title">
             <h1>UNITED AGAINST HUNGER</h1>
         </div>
-    </section>
-    <!-- End Home Section -->
-
-    <!-- Cards Section -->
-    <section class="cards-container">
+   </section>
+   <!-- End Home Section -->
+   <!-- Cards Section -->
+   <!-- <section class="cards-container">
         <div class="cards-donate card">
             <i class="fa-solid fa-hand-holding-dollar"></i>
             <h2>DONATE</h2>
@@ -42,7 +41,7 @@
         <div class="cards-volunteer card">
             <i class="fa-solid fa-eye"></i>
             <h2>SHOW</h2>
-            <a href="htm.html"><button>Show Drives</button></a>
+            <a href="htm.html"><button class="hello">Show Drives</button></a>
         </div>
         <div class="cards-drives card">
             <i class="fa-solid fa-plus"></i>
@@ -91,27 +90,93 @@
                 </form>
             </div>
           </div>
-    </section>
-    <!-- End Cards Section -->
-
-    <!-- About Section -->
-    <section class="about-container-whole">
-        <div class="about-container">
-            <div class="about-txt">
-                <h1 class="about-title"> About Our Mission. </h1>
-                <h1 class="about-title1">UNITED AGAINST HUNGER</h1>
-                <p class="about-paragrpah">My sister and I are teaming up for a competition where we're developing a website dedicated to <br>
-                    addressing food insecurity. Our project focuses on providing essential resources for people in need, <br>
-                    featuring options such as donation portals, displaying ongoing drives, and allowing users to organize and add <br>
-                    their own drives. With this app, we aim to make a tangible difference in combating <br>
-                    hunger and fostering community support.
-                </p>
-            </div>
-            <div class="about-img">
-                <img src="images/donate.png" alt="Image">
-            </div>
+    </section> -->
+   <section class="cards-container">
+        <div class="cards-donate card">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <h2>DONATE</h2>
+            <a href="donate.html"><button class="hello">Donate Now</button></a>
         </div>
-    </section>
+        <div class="cards-volunteer card">
+            <i class="fa-solid fa-eye"></i>
+            <h2>SHOW</h2>
+            <a href="htm.html"><button class="hello">Show Drives</button></a>
+        </div>
+        <div class="cards-drives card">
+            <i class="fa-solid fa-plus"></i>
+            <h2 id="add">ADD</h2>
+            <input type="checkbox" id="show">
+            <label for="show" class="suggest" role="button">Add Drive</label>              
+            <div class="pplsugg">
+                <label for="show" class="close-btn" title="close">&times;</label>
+                <h1>Add Drive</h1>
+                <form action="#">
+                    <div class="data">
+                        <label>Name Of Drive:</label>
+                        <input id="name" type="name" required>
+                    </div>
+                    <div class="data">
+                        <label>Date Of Drive:</label>
+                        <input id="date" type="date" required>
+                    </div>
+                    <div class="data">
+                        <label>Time Of Drive:</label>
+                        <input id="time" type="time" required>
+                    </div>
+                    <div class="data">
+                        <label>State of Drive:</label>
+                        <input id="state" placeholder="What state is your drive located in" type="text" required>
+                    </div>
+                    <div class="data">
+                        <label>Address Of Drive:</label>
+                        <input id="address" type="text" required>
+                    </div>
+                    <div class="data">
+                        <label>Description Of Drive:</label>
+                        <input id="descpt" type="text" required>
+                    </div>
+                    <div class="data">
+                        <label>URL Of Drive:</label>
+                        <input id="url" placeholder="Shorten Link" type="text" required>
+                    </div>
+                    <div class="butn">
+                        <div class="inner"></div>
+                        <br>
+                        <input type="submit" value="submit" class="sub" id="submit">
+                        <br>
+                        <br>
+                      </div>
+                </form>
+            </div>
+          </div>
+   </section>
+
+   <!-- End Cards Section -->
+   <!-- About Section -->
+<section class="about-container-whole">
+    <div class="about-container">
+        <div class="about-txt">
+            <h1 class="about-title"> About Our Mission. </h1>
+            <h1 class="about-title1">UNITED AGAINST HUNGER</h1>
+            <p class="about-paragrpah">
+                My sister and I are teaming up for a competition where <br>
+                we're developing a website dedicated to addressing food<br>
+                insecurity. Our project focuses on providing essential<br>
+                resources for people in need, featuring options as<br>
+                donation portals, displaying ongoing drives, and allowing<br>
+                users to organize and add their own initiatives. With this<br>
+                endeavor, we aim to make a tangible difference in combating <br>
+                hunger and fostering community support.
+            </p>
+        </div>
+        <div class="blank-space"></div>
+    </div>
+    <div class="about-img">
+        <img src="images/donate.png" class="inside-about-img">
+    </div>
+</section>
+ 
+
     <!-- End About Section -->
 
     <section class="info">

@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* Variables */
 :root {
   --orange-color: #FBA61A;
@@ -15,13 +14,16 @@
   --nav:#7EC248;
   --light-blue: #bed5fb;
 }
-
 /* Body Styles */
-body {
+html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: 200vh;
+  overflow-x: hidden;
 }
-
+body{
+  background: linear-gradient(120deg, #f3f3f3, #eaeaea);
+  overflow-x: hidden;
+}
 /* Global Link Styles */
 a {
   text-decoration: none;
@@ -35,7 +37,6 @@ a:hover {
   font-weight: 900;
   outline: 1px white;
 }
-
 /* Header Section */
 .container {
   display: flex;
@@ -99,49 +100,73 @@ nav h1 {
 }
 /* End Home Section */
 /* Cards Section */
-.cards-container {
+.cards-container{
   display: flex;
   gap: 5rem;
   position: relative;
-  padding-left: 13rem;
-  padding-right: 13rem;
-  align-items: center;
-}
-.card {
-  background: var(--orange-color);
-  color: var(--white-color);
+  bottom: 13rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50rem;
-  height: 12rem;
-  border-radius: 0px;
-  cursor: pointer;
   justify-content: center;
   align-items: center;
 }
-.card i {
-  font-size: 60px;
-  padding-bottom: .5rem;
+.card{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ width: 95rem;
+ height: 30rem;
+ border-radius: 30px;
+ transition: all .4s ease;
+ cursor: pointer;
+ justify-content: center;
+} 
+.card i{
+ font-size: 150px;
+ padding-bottom: .5rem;
+ transition: all .4s ease;
 }
-.card h2 {
-  margin-bottom: 20px;
+.card:hover i {
+  font-size: 164px;
 }
-button, .suggest {
-  background-color: transparent;
-  color: var(--white-color);
-  padding: 10px 20px;
+.card h2{
+  font-size: 46px;
+  margin-bottom: 15px;
+  transition: all .4s ease;
+}
+.card:hover h2 {
+  font-size: 50px;
+} 
+.cards-donate, .cards-drives{
+ background: #FBA61A;
+ border: 10px solid #f99a01;
+ color: #fff; 
+}
+.cards-volunteer{
+ background: #7EC248;
+ border: 10px solid #68ba26;
+ color: #fff;
+}
+.hello, .suggest{
+  font-size: 20px;
+ background-color: transparent;
+  color: #fff;
+  padding: 20px 40px;
+  margin-top: 10px;
   border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all ease .4s;
+  font-size: 20px;
 }
-button:hover, .suggest:hover {
+.hello:hover, .suggest:hover {
   background-color: var(--white-color);
   color: var(--orange-color);
   border: 1px solid #ccc;
+  font-size: 23px;
 }
-/* Add Drives Button */
+  /* Add Drives Button */
 .suggestion .suggest {
   background: var(--green-color);
   padding: 10px 20px;
@@ -253,49 +278,39 @@ form .butn input{
 }
 /* End Cards Section */
 /* About Section */
-.about-container-whole {
-  height: 70vh;
-  width: 100%;
+.about-container{
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* padding-left: 4rem; */
-  /* padding-right: 4rem; */
-  background-color: var(--light-blue);
-  justify-content: space-around;
+  background: var(--light-blue);
+  /* gap: 1rem; */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-.about-container {
-  display: flex;
+.blank-space{
+  width: 55rem; /*moves the text left or right*/
 }
-.about-txt {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.about-title{
+  color: #FCA61A;
 }
-.about-title {
-  color: var(--orange-color);
-  font-size: 45px;
+.about-title1{
+  font-size: 30px;
+  color: #7FC248;
 }
-.about-title1 {
-  color: var(--title-tt);
-  font-size: 45px;
-}
-.about-paragrpah {
-  color: #fff;
-  line-height: 30px;
-  font-size: 15px;
-  font-weight: 100;
-}
-.about-img img {
-  border-radius: 20px;
-  width: 500px;
-  /* display: flex; */
+.inside-about-img{
+  width: 50rem;
+  height: 30rem;
+  position: relative;
+  bottom: 30rem;
+  left: 45rem;
+  align-items: end;
 }
 /* End About Section */
 /* Info Section */
 .info {
   position: relative; /* Add relative positioning */
-  margin-top: 60px;
+  margin-top: -350px;
   height: 60vh;
   background: url('images/colorful-fruits.jpg');
   background-size: cover;
@@ -380,7 +395,7 @@ textarea {
 }
 
 /* Styles for small devices (phones) */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .home-container {
     height: 62vh;
   }
@@ -609,4 +624,4 @@ textarea {
   .card h2 {
     margin-bottom: 20px;
   }
-}
+} */

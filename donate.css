@@ -80,17 +80,28 @@ body{
   padding: 1%;
   margin-bottom: 40px;
   margin: 0 1%;
-  background-color: var(--white-color);
+  background-color: #7EC248;
   gap: 1.5rem;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   cursor: pointer;
   /* flex-wrap: wrap; */
   /* flex-direction: row; */  
   /* transition: .5s ease; */
 }
+.card2{
+  display: flex;
+  align-items: flex-start;
+  padding: 1%;
+  margin-bottom: 40px;
+  margin: 0 1%;
+  background-color: #FBA61A;
+  gap: 1.5rem;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  cursor: pointer;
+}
 /* End Cards */
-
 
 /* Left Part Of The Card */
 .card-left{

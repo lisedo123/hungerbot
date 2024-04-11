@@ -25,17 +25,9 @@ body{
   overflow-x: hidden;
 }
 /* Global Link Styles */
-a {
+* a {
   text-decoration: none;
-  color: var(--title-tt);
-  font-weight: 500;
-  transition: all .1s ease;
   color: white;
-}
-a:hover {
-  color: #47930a;
-  font-weight: 900;
-  outline: 1px white;
 }
 /* Header Section */
 .container {
@@ -53,10 +45,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 160vh;
+  width: 180vh;
 }
 nav h1 {
-  font-size: 35px;
+  font-size: 50px;
   color: #fff;
   cursor: pointer;
 }
@@ -67,6 +59,19 @@ nav h1 {
   list-style: none;
   font-size: 20px;
   font-weight: 800;
+}
+.navbar-container  a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 100;
+  transition: all .1s ease;
+  color: white;
+  /* color: var(--orange-color); */
+}
+.navbar-container a:hover {
+  color: #47930a;
+  font-weight: 900;
+  outline: 1px white;
 }
 /* End Header Section */
 /* Home Section */
@@ -192,18 +197,6 @@ input[type="checkbox"]{
 #show:checked ~ .pplsugg {
   display: block;
 }
-.pplsugg .close-btn{
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 40px;
-  cursor: pointer;
-  transition: .5s ease;
-}
-.close-btn:hover{
-  color: var(--green-color);
-  cursor: pointer;
-}
 .pplsugg {
   display: none;
   background: var(--orange-color);
@@ -212,9 +205,9 @@ input[type="checkbox"]{
   position: absolute;
   top: -380px;
   left: 400px;
-  z-index: 2;
   width: 450px;
   padding: 30px;
+  z-index: 2;
   justify-content: center;
   align-items: center;
 }
@@ -274,6 +267,18 @@ form .butn input{
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+.pplsugg .close-btn{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 40px;
+  cursor: pointer;
+  transition: .5s ease;
+}
+.close-btn:hover{
+  color: var(--green-color);
   cursor: pointer;
 }
 /* End Cards Section */

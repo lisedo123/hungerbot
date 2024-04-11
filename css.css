@@ -29,28 +29,32 @@ body{
   text-decoration: none;
   color: white;
 }
+
 /* Header Section */
+
 .container {
   display: flex;
   flex-direction: column;
 }
 .navbar-container {
   height: 10vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--nav);
 }
-nav {
+.navbar-container nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 180vh;
+  width: 90%;
 }
-nav h1 {
-  font-size: 50px;
+.navbar-container nav h1 {
+  font-size: 2.5vw; /* Use vw for relative font size */
   color: #fff;
   cursor: pointer;
+  font-weight: 200;
 }
 .navbar-container ul {
   display: flex;
@@ -60,21 +64,32 @@ nav h1 {
   font-size: 20px;
   font-weight: 800;
 }
-.navbar-container  a {
+.navbar-container .links {
   text-decoration: none;
-  font-size: 30px;
+  font-size: 1.5vw; /* Use vw for relative font size */
   font-weight: 100;
-  transition: all .1s ease;
+  transition: all .3s ease;
   color: white;
-  /* color: var(--orange-color); */
 }
-.navbar-container a:hover {
+.navbar-container .links:hover {
   color: #47930a;
-  font-weight: 900;
-  outline: 1px white;
+  font-weight: 500;
 }
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar-container nav h1 {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+
+  .navbar-container .links {
+    font-size: 4vw; /* Adjust font size for smaller screens */
+  }
+}
+
 /* End Header Section */
+
 /* Home Section */
+
 .home-container {
   height: 80vh;
   background: url('hero.png.png');
@@ -87,32 +102,46 @@ nav h1 {
   color: var(--white-color);
 }
 .home-container p {
-  font-size: 30px;
+  font-size: 2.5vw; /* Use vw for relative font size */
   font-weight: 800;
   background: var(--orange-color);
-  width: 20rem;
-  padding: 5px;
+  width: 15%; /* You can keep this fixed for small screens */
+  padding: 0.5rem; /* Use rem for padding */
   text-align: center;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 .home-title {
-  padding-bottom: 10rem;
-
+  padding-bottom: 10vh; /* Use vh for relative padding */
 }
 .home-container h1 {
-  font-size: 70px;
+  font-size: 7vw; /* Use vw for relative font size */
   font-weight: 900;
 }
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .home-container p {
+    width: 30%; /* Adjust width for smaller screens */
+  }
+
+  .home-title {
+    padding-bottom: 5vh; /* Adjust padding for smaller screens */
+  }
+
+  .home-container h1 {
+    font-size: 10vw; /* Adjust font size for smaller screens */
+  }
+}
+
 /* End Home Section */
+
 /* Cards Section */
+
 .cards-container{
   display: flex;
-  gap: 5rem;
+  gap: 5%;
   position: relative;
   bottom: 13rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  display: flex;
+  padding: 0 4rem; /* Adjust padding for both left and right sides */
   justify-content: center;
   align-items: center;
 }
@@ -126,11 +155,11 @@ nav h1 {
  transition: all .4s ease;
  cursor: pointer;
  justify-content: center;
-} 
-.card i{
- font-size: 150px;
- padding-bottom: .5rem;
- transition: all .4s ease;
+}
+.card i {
+  font-size: 150px;
+  padding-bottom: .5rem;
+  transition: all .4s ease;
 }
 .card:hover i {
   font-size: 164px;
@@ -142,7 +171,20 @@ nav h1 {
 }
 .card:hover h2 {
   font-size: 50px;
-} 
+}
+/* Adjustments for smaller devices */
+@media (max-width: 800px) {
+  .cards-container {
+    flex-wrap: wrap;
+    bottom: auto;
+    padding: 0;
+  }
+
+  .card {
+    width: 90%; /* Adjust width for smaller devices */
+    margin-bottom: 2rem; /* Add margin between cards */
+  }
+}
 .cards-donate, .cards-drives{
  background: #FBA61A;
  border: 10px solid #f99a01;
@@ -190,7 +232,7 @@ nav h1 {
   border-radius: 4px;
   color: var(--green-color);
 }
-/* inside button */ 
+  /* inside button */ 
 input[type="checkbox"]{
   display: none;
 }
@@ -281,29 +323,31 @@ form .butn input{
   color: var(--green-color);
   cursor: pointer;
 }
+
 /* End Cards Section */
+
 /* About Section */
-.about-container{
+
+.about-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background: var(--light-blue);
-  /* gap: 1rem; */
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-.blank-space{
+.blank-space {
   width: 55rem; /*moves the text left or right*/
 }
-.about-title{
-  color: #FCA61A;
+.about-title {
+  color: #fca61a;
 }
-.about-title1{
+.about-title1 {
   font-size: 30px;
-  color: #7FC248;
+  color: #7fc248;
 }
-.inside-about-img{
+.inside-about-img {
   width: 50rem;
   height: 30rem;
   position: relative;
@@ -311,8 +355,30 @@ form .butn input{
   left: 45rem;
   align-items: end;
 }
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .inside-about-img {
+    opacity: 0;
+    width: 60%; /* Adjust image width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    position: static; /* Reset position */
+    bottom: auto;
+    left: auto;
+    margin-top: 2rem; /* Add margin for spacing */
+  }
+  .blank-space {
+    width: auto; /* Reset width */
+  }
+}
+
+
 /* End About Section */
+
 /* Info Section */
+
 .info {
   position: relative; /* Add relative positioning */
   margin-top: -350px;
@@ -326,7 +392,8 @@ form .butn input{
   flex-direction: column;
   color: var(--green-color);
 }
-  /* Add overlay */
+
+/* Add overlay */
 .info::after {
   content: "";
   position: absolute;
@@ -336,12 +403,29 @@ form .butn input{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
 }
+
 .info h1 {
   font-size: 70px;
   font-weight: 900;
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .info {
+    height: 40vh; /* Adjust height for smaller screens */
+    margin-top: -200px; /* Adjust margin-top for smaller screens */
+  }
+
+  .info h1 {
+    font-size: 50px; /* Adjust font size for smaller screens */
+  }
+}
+
+
 /* End Info Section */
+
 /* Contact Us Section */
+
 .contact-container {
   display: flex;
   flex-direction: column;

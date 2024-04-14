@@ -491,6 +491,7 @@ textarea {
   padding: .6rem;
 }
 
+
 /* Styles for smaller screens (phones) */
 @media screen and (max-width: 800px) {
   /* Adjustments for the navbar */

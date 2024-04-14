@@ -392,7 +392,6 @@ form .butn input{
   flex-direction: column;
   color: var(--green-color);
 }
-
 /* Add overlay */
 .info::after {
   content: "";
@@ -403,12 +402,10 @@ form .butn input{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
 }
-
 .info h1 {
   font-size: 70px;
   font-weight: 900;
 }
-
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
   .info {
@@ -420,7 +417,6 @@ form .butn input{
     font-size: 50px; /* Adjust font size for smaller screens */
   }
 }
-
 
 /* End Info Section */
 
@@ -472,8 +468,20 @@ textarea {
   background: var(--white-color);
   color: var(--orange-color);
 }
+@media screen and (max-width: 768px) {
+  .contact-ip {
+    flex-direction: column;
+  }
+
+  .ip1,
+  .ip2 {
+    width: 100%;
+  }
+}
+
 /* End Contact Us Section */
 /* Footer Section */
+
 .footer {
   background: var(--title-tt);
   color: #fff;
@@ -483,234 +491,97 @@ textarea {
   padding: .6rem;
 }
 
-/* Styles for small devices (phones) */
-/* @media (max-width: 1200px) {
-  .home-container {
-    height: 62vh;
+
+/* Styles for smaller screens (phones) */
+@media screen and (max-width: 768px) {
+  /* Adjustments for the navbar */
+  .navbar-container nav h1 {
+    font-size: 5vw;
   }
-}
-@media (min-width: 1120px) {
-  .pplsugg {
-    top: -300px;
-    left: 350px;
-    width: 450px;
-    padding: 30px;
+
+  .navbar-container .links {
+    font-size: 4vw;
   }
-}
-@media (max-width: 1120px) {
-  .pplsugg {
-    top: -300px;
-    left: 350px;
-    width: 450px;
-    padding: 30px;
+
+  /* Adjustments for the home section */
+  .home-container p {
+    width: 30%;
   }
-}
-@media (max-width: 1011px) {
-  .pplsugg {
-    top: -300px;
-    left: 290px;
-    width: 450px;
-    padding: 30px;
+
+  .home-title {
+    padding-bottom: 5vh;
   }
-}
-@media (max-width: 996px) {
-  .home-container {
-    height: 49vh;
-  }
-}
-@media (max-width: 936px) {
-  .home-container {
-    height: 49vh;
-  }
+
   .home-container h1 {
-    font-size: 60px;
+    font-size: 10vw;
   }
-  .cards-container {
-    gap: 2rem;
-    bottom: 7rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-}
-@media (max-width: 934px) {
-  .home-container {
-    height: 49vh;
-  }
-  .home-container h1 {
-    font-size: 60px;
-  }
-  .cards-container {
-    display: flex;
-    gap: 5rem;
-    position: relative;
-    bottom: 5rem;
-    padding-left: 13rem;
-    padding-right: 13rem;
-    align-items: center;
-  }
-  .card {
-    background: var(--orange-color);
-    color: var(--white-color);
-    display: flex;
+
+  /* Adjustments for the about section */
+  .about-container {
     flex-direction: column;
-    align-items: center;
-    width: 50rem;
-    height: 12rem;
-    border-radius: 30px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
   }
-  .card i {
-    font-size: 60px;
-    padding-bottom: .5rem;
+
+  .inside-about-img {
+    opacity: 0;
+    width: 60%;
+    height: auto;
+    position: static;
+    bottom: auto;
+    left: auto;
+    margin-top: 2rem;
   }
-  .card h2 {
-    margin-bottom: 20px;
+
+  .blank-space {
+    width: auto;
   }
-}
-@media (max-width: 903px) and (min-width: 890px) {
-  .pplsugg {
-    top: -300px;
-    left: 240px;
-    width: 450px;
-    padding: 30px;
+
+  /* Adjustments for the info section */
+  .info {
+    height: 40vh;
+    margin-top: -200px;
   }
-  .cards-container {
-    display: flex;
-    gap: 5rem;
-    position: relative;
-    bottom: 5rem;
-    padding-left: 13rem;
-    padding-right: 13rem;
-    align-items: center;
-  }
-  .card {
-    background: var(--orange-color);
-    color: var(--white-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50rem;
-    height: 12rem;
-    border-radius: 30px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-  }
-  .card i {
-    font-size: 60px;
-    padding-bottom: .5rem;
-  }
-  .card h2 {
-    margin-bottom: 20px;
-  }
-}
-@media (min-width: 800px) {
-  .pplsugg {
-    top: -300px;
-    left: 180px;
-    width: 450px;
-    padding: 30px;
-  }
-  .cards-container {
-    display: flex;
-    gap: 5rem;
-    position: relative;
-    bottom: 5rem;
-    padding-left: 13rem;
-    padding-right: 13rem;
-    align-items: center;
-  }
-  .card {
-    background: var(--orange-color);
-    color: var(--white-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50rem;
-    height: 12rem;
-    border-radius: 30px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-  }
-  .card i {
-    font-size: 60px;
-    padding-bottom: .5rem;
-  }
-  .card h2 {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 858px) {
-  .home-container {
-    height: 63vh;
-  }
-  .cards-container {
-    display: flex;
-    gap: 5rem;
-    position: relative;
-    bottom: 5rem;
-    padding-left: 13rem;
-    padding-right: 13rem;
-    align-items: center;
-  }
-  .card {
-    background: var(--orange-color);
-    color: var(--white-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50rem;
-    height: 12rem;
-    border-radius: 30px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-  }
-  .card i {
-    font-size: 60px;
-    padding-bottom: .5rem;
-  }
-  .card h2 {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 800px) {
-  .home-container {
-    height: 54vh;
-  }
-  .home-container h1 {
+
+  .info h1 {
     font-size: 50px;
   }
-  .cards-container {
-    display: flex;
-    gap: 5rem;
-    position: relative;
-    bottom: 5rem;
-    padding-left: 13rem;
-    padding-right: 13rem;
-    align-items: center;
-  }
-  .card {
-    background: var(--orange-color);
-    color: var(--white-color);
-    display: flex;
+
+  /* Adjustments for the contact section */
+  .contact-ip {
     flex-direction: column;
-    align-items: center;
-    width: 50rem;
-    height: 12rem;
-    border-radius: 30px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
   }
-  .card i {
-    font-size: 60px;
-    padding-bottom: .5rem;
+
+  .ip1,
+  .ip2 {
+    width: 100%;
   }
-  .card h2 {
-    margin-bottom: 20px;
+}
+/* Styles for tablets (medium-sized screens) */
+@media screen and (max-width: 1024px) {
+  /* Adjustments for the navbar */
+  .navbar-container nav h1 {
+    font-size: 3vw;
   }
-} */
+
+  .navbar-container .links {
+    font-size: 2vw;
+  }
+
+  /* Adjustments for the home section */
+  .home-container p {
+    width: 20%;
+  }
+
+  .home-title {
+    padding-bottom: 7vh;
+  }
+
+  .home-container h1 {
+    font-size: 9vw;
+  }
+
+  /* Adjustments for the about section */
+  .inside-about-img {
+    width: 70%;
+  }
+}
+

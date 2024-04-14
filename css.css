@@ -556,8 +556,8 @@ textarea {
   }
 }
 /* Styles for tablets (medium-sized screens) */
-@media screen and (max-width: 1024px) {
-  /* Adjustments for the navbar */
+/* @media screen and (max-width: 1024px) {
+  /* Adjustments for the navbar 
   .navbar-container nav h1 {
     font-size: 3vw;
   }
@@ -566,7 +566,7 @@ textarea {
     font-size: 2vw;
   }
 
-  /* Adjustments for the home section */
+  /* Adjustments for the home section 
   .home-container p {
     width: 20%;
   }
@@ -579,9 +579,9 @@ textarea {
     font-size: 9vw;
   }
 
-  /* Adjustments for the about section */
+  /* Adjustments for the about section 
   .inside-about-img {
     width: 70%;
   }
-}
+} */
 

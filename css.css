@@ -76,7 +76,7 @@ body{
   font-weight: 500;
 }
 /* Media Query for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .navbar-container nav h1 {
     font-size: 5vw; /* Adjust font size for smaller screens */
   }
@@ -118,7 +118,7 @@ body{
   font-weight: 900;
 }
 /* Media Query for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .home-container p {
     width: 30%; /* Adjust width for smaller screens */
   }
@@ -356,7 +356,7 @@ form .butn input{
   align-items: end;
 }
 /* Media Query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .about-container {
     flex-direction: column;
   }
@@ -407,7 +407,7 @@ form .butn input{
   font-weight: 900;
 }
 /* Media Query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .info {
     height: 40vh; /* Adjust height for smaller screens */
     margin-top: -200px; /* Adjust margin-top for smaller screens */
@@ -468,7 +468,7 @@ textarea {
   background: var(--white-color);
   color: var(--orange-color);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 808px) {
   .contact-ip {
     flex-direction: column;
   }
@@ -491,9 +491,8 @@ textarea {
   padding: .6rem;
 }
 
-
 /* Styles for smaller screens (phones) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   /* Adjustments for the navbar */
   .navbar-container nav h1 {
     font-size: 5vw;

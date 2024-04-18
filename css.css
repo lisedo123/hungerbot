@@ -120,11 +120,14 @@ body{
 /* Media Query for smaller screens */
 @media screen and (max-width: 800px) {
   .home-container p {
-    width: 30%; /* Adjust width for smaller screens */
+    width: 100%; /* Adjust width for smaller screens */
+    font-size: 3.5vw; /* Use vw for relative font size */
+    padding: 1rem; /* Use rem for padding */
   }
 
   .home-title {
     padding-bottom: 5vh; /* Adjust padding for smaller screens */
+    text-align: center;
   }
 
   .home-container h1 {
@@ -324,10 +327,27 @@ form .butn input{
   cursor: pointer;
 }
 
+@media screen and (max-width: 800px) {
+  .pplsugg {
+    display: none;
+    top: 60%;
+    left: 5%;
+    width: 90%;
+    padding: 2%;
+  }
+  form .data input{
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 6px;
+  }
+}
+
 /* End Cards Section */
 
 /* About Section */
-
 .about-container {
   display: flex;
   flex-direction: row;
@@ -356,9 +376,14 @@ form .butn input{
   align-items: end;
 }
 /* Media Query for smaller screens */
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .about-container {
     flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .br{
+    display: none;
   }
   .inside-about-img {
     opacity: 0;
@@ -407,12 +432,12 @@ form .butn input{
   font-weight: 900;
 }
 /* Media Query for smaller screens */
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .info {
     height: 40vh; /* Adjust height for smaller screens */
     margin-top: -200px; /* Adjust margin-top for smaller screens */
+    text-align: center;
   }
-
   .info h1 {
     font-size: 50px; /* Adjust font size for smaller screens */
   }
@@ -468,11 +493,10 @@ textarea {
   background: var(--white-color);
   color: var(--orange-color);
 }
-@media screen and (max-width: 808px) {
+@media screen and (max-width: 800px) {
   .contact-ip {
     flex-direction: column;
   }
-
   .ip1,
   .ip2 {
     width: 100%;

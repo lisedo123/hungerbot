@@ -176,7 +176,7 @@ body{
   font-size: 50px;
 }
 /* Adjustments for smaller devices */
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .cards-container {
     flex-wrap: wrap;
     bottom: auto;
@@ -579,33 +579,3 @@ textarea {
     width: 100%;
   }
 }
-/* Styles for tablets (medium-sized screens) */
-/* @media screen and (max-width: 1024px) {
-  /* Adjustments for the navbar 
-  .navbar-container nav h1 {
-    font-size: 3vw;
-  }
-
-  .navbar-container .links {
-    font-size: 2vw;
-  }
-
-  /* Adjustments for the home section 
-  .home-container p {
-    width: 20%;
-  }
-
-  .home-title {
-    padding-bottom: 7vh;
-  }
-
-  .home-container h1 {
-    font-size: 9vw;
-  }
-
-  /* Adjustments for the about section 
-  .inside-about-img {
-    width: 70%;
-  }
-} */
-

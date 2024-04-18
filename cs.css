@@ -13,9 +13,6 @@
 body{
   font-family: sans-serif;
   background-color: var(--white-color);
-  /* margin-left: 1rem; */
-  /* color: var(--green-color); */
-  /* padding: 0 20px; */
 }
 
 /* Back Button */
@@ -66,7 +63,6 @@ main p{
   justify-content: center;
   transition: all .4s ease;
   text-transform: uppercase;
-  /* color: #0f2182; */
   border: #ffffff 1px solid;
   transition: .3s ease;
 }

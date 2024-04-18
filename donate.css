@@ -106,10 +106,8 @@ body{
 /* Left Part Of The Card */
 .card-left{
   width: 25%;
-  min-width: 50px;
   display: flex;
   justify-content: center;
-  border: 20%;
 }
 .card-left img{
   width: 100%;
@@ -117,13 +115,20 @@ body{
   padding: 1rem;
   border-radius: 40px;
 }
+@media screen and (max-width: 800px) {
+  .card-left{
+    width: 0px;
+  }
+  .card-left img{
+    display: none;
+  }
+}
 /* End Left Part Of The Card */
-
 
 /* Right Side of the card */
 .card-center{
   justify-content: center; 
-  width: 75%;
+  width: 85%;
   cursor: text;
   /* padding: 20px; */ 
 }
@@ -131,7 +136,7 @@ body{
   font-size: 60px;
   cursor: text;
 }
-.card-center .card-detail {
+.card-detail {
   color: #0b0a0a;
   font-size: 20px;
   /* width: 1500px; */
@@ -160,6 +165,12 @@ body{
 }
 .butn:hover{
   background-color: #fff2de;
+}
+@media screen and (max-width: 800px) {
+  .butn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 .card-url{
   text-decoration: none;
